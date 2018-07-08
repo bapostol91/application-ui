@@ -8,10 +8,11 @@ export default () => (
     <div>
         <NavBar isOpen={State.getCurrentState().navbar.isOpen} toggle={NavBarState.toggle}/>
 
-        <p >
-           Pentru mai multe detalii va rog sa il contactati pe Jhon la 0744 602 643.
-        </p>
-
-        <Carusel />
+        <div className="container">
+            <p className="col text-center">
+                Pentru mai multe detalii va rog sa il contactati pe Jhon la 0744 602 643.
+            </p>
+            <Carusel />
+        </div>
     </div>
 );

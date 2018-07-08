@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './logo.png';
+import facebookLogo from './facebook-circle.png';
 import {
     Collapse,
     Navbar,
@@ -16,7 +17,6 @@ import {
 import './NavBar.css';
 
 export default ({isOpen, toggle}) => {
-    console.log(isOpen);
     return (
         <div>
             <Navbar color="light" light expand="md">
@@ -26,23 +26,18 @@ export default ({isOpen, toggle}) => {
                 <NavbarToggler onClick={toggle}/>
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink href="/mobila/">Mobila</NavLink>
-                        </NavItem>
                         <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
+                            <DropdownToggle nav caret className={"navbar-center-align"}>
                                 Contact
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>
-                                    Email
-                                </DropdownItem>
-                                <DropdownItem>
-                                    Adresa
+                                <DropdownItem className={"navbar-center-align"}>
+                                    <a href="mailto:bapostol91@yahoo.com">bapostol91@yahoo.com</a>
                                 </DropdownItem>
                                 <DropdownItem divider/>
-                                <DropdownItem>
-                                    <NavLink href="https://www.facebook.com/ioan.apo.3">Facebook</NavLink>
+                                <DropdownItem className={"navbar-center-align"}>
+                                    <NavLink href="https://www.facebook.com/ioan.apo.3">
+                                        <img height={26} src={facebookLogo} alt="logo"/> Jhon Apostol</NavLink>
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>

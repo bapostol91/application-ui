@@ -11,7 +11,6 @@
   to { transform: rotate(360deg); }
 }
 
-navbar-custom{
-  height: 50px;
-
+.navbar-center-align{
+  text-align: center;
 }

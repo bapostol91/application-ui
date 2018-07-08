@@ -8,6 +8,7 @@ import state from "./State";
 
 registerServiceWorker();
 const getNextApp = () => require('./Mobila/App').default;
+
 const render = Component => {
     ReactDOM.render(
       <Component/>,
