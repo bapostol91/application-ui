@@ -1,14 +1,16 @@
 let defaultState = {
-    page: 0
+    images: []
 };
 
 export default (state = defaultState, action) => {
     switch (action.type) {
-        case 'PAGE_CHANGE':
+        case 'IMAGES':
             return {
                 ...state,
-                page: action.page
+                images: [...state.images, action.images]
             };
+        case 'RESET_IMAGES':
+            return defaultState;
         default:
             return state
     }
